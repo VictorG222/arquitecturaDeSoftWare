@@ -32,6 +32,4 @@ function signup(){
         
     }
 
-    console.log($("#correo").val());
-    console.log($("#pass").val());
 }

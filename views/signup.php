@@ -72,7 +72,7 @@ button:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 15%;
+  width: 40%;
 }
 </style>
 <body >
@@ -84,7 +84,7 @@ button:hover {
     <img src="./res/img/bettergym.png" class="center">
 
 
-    <h3>Registro de usuario</h3>
+    <h4>Registro de usuario</h4>
     <p>Porfavor llene el formulario de registro.</p>
     <hr>
 
@@ -94,7 +94,9 @@ button:hover {
     <label for="pass"><b>Contraseña</b></label>
     <input id="pass" type="password" placeholder="Ingrese su contraseña" name="pass" required>
 
-    
+    <label for="pass-verify"><b>Confirmar contraseña</b></label>
+    <input id="pass-verify" type="password" placeholder="Confirmar contraseña" name="pass-verify" required>
+
     <label for="nombre"><b>Nombre</b></label>
     <input id="nombre" type="text" placeholder="Ingrese su nombre" name="nombre" required>
 
@@ -113,14 +115,13 @@ button:hover {
 
 
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button id="btnSignUp" class="signupbtn">Sign Up</button>
+      <button type="button" class="cancelbtn">Cancelar</button>
+      <button id="btnSignUp" class="signupbtn">Registrar</button>
     </div>
   </div>
 </form>
 
 </body>
 </html>
-
 
 <script src="./scripts/signup.js?v1.0.0"></script>
