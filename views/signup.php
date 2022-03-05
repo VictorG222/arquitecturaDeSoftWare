@@ -94,6 +94,7 @@ button:hover {
     <label for="pass"><b>Contraseña</b></label>
     <input id="pass" type="password" placeholder="Ingrese su contraseña" name="pass" required>
 
+    
     <label for="nombre"><b>Nombre</b></label>
     <input id="nombre" type="text" placeholder="Ingrese su nombre" name="nombre" required>
 
@@ -108,6 +109,7 @@ button:hover {
 
     <label for="fecha"><b>Fecha de registro</b></label>
     <input id="fecha" type="date"  name="fecha" required>
+    
 
 
     <div class="clearfix">
