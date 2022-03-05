@@ -4,6 +4,11 @@
 body {font-family: Arial, Helvetica, sans-serifs}
 * {box-sizing: border-box}
 
+body{
+    color: 77B64D;
+}
+
+
 /* Full-width input fields */
 
 
@@ -66,7 +71,7 @@ button:hover {
 <form action="/action_page.php" style="border:1px solid #ccc; background-color: #F5F5F5">
   <div class="container">
 
-    <img src="..\res\img\bettergym.png" alt="bettergym" width="500" height="600">
+    <img src="../res/img/bettergym.jpg" width="500" height="600">
 
 
     <h3>Registro de usuario</h3>
@@ -74,19 +79,19 @@ button:hover {
     <hr>
 
     <label for="nombre"><b>Nombre</b></label>
-    <input type="text" placeholder="Ingrese su nombre" name="nombre" required>
+    <input id="nombre" type="text" placeholder="Ingrese su nombre" name="nombre" required>
 
     <label for="apellido"><b>Apellido</b></label>
-    <input type="text" placeholder="Ingrese su apellido" name="apellido" required>
+    <input id="apellido" type="text" placeholder="Ingrese su apellido" name="apellido" required>
 
     <label for="edad"><b>Edad</b></label>
-    <input type="text" placeholder="Ingrese su edad" name="edad" required>
+    <input id="edad" type="text" placeholder="Ingrese su edad" name="edad" required>
 
     <label for="sexo"><b>Sexo</b></label>
-    <input type="text" placeholder="Ingrese su sexo" name="sexo" required>
+    <input id="sexo" type="text" placeholder="Ingrese su sexo" name="sexo" required>
 
     <label for="fecha"><b>Fecha de registro</b></label>
-    <input type="date"  name="fecha" required>
+    <input id="fecha" type="date"  name="fecha" required>
 
 
     <div class="clearfix">
