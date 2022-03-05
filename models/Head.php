@@ -43,17 +43,17 @@ class Head {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     
     <!-- Firebase libraries -->
-    <script defer src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
 
 
     <!-- Local libraries | Title -->
     <title>' . $this->title . '</title>
-    <link href="' . $this->root . '/res/css/main.css" rel="stylesheet" type="text/css" media="all"/>
-    <script src="' . $this->root . '/scripts/firebase_init.js"></script>
-    <script src="' . $this->root . '/classes/FirebaseSchema.js"></script>
-    <script src="' . $this->root . '/res/assets/canvasjs.min.js"></script>
-    <script src="' . $this->root . '/res/assets/jquery.canvasjs.min.js"></script>
+    <link href="' . $this->root . '/arquitecturaDeSoftWare/res/css/main.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="' . $this->root . '/arquitecturaDeSoftWare/scripts/firebase_init.js"></script>
+    <script src="' . $this->root . '/arquitecturaDeSoftWare/classes/FirebaseSchema.js"></script>
+    <script src="' . $this->root . '/arquitecturaDeSoftWare/res/assets/canvasjs.min.js"></script>
+    <script src="' . $this->root . '/arquitecturaDeSoftWare/res/assets/jquery.canvasjs.min.js"></script>
 
 
     </head>
