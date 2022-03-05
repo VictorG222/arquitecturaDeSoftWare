@@ -3,7 +3,7 @@
 */
 class Head {
   // Globar parameters
-  public $root = 'http://localhost/idgs73web/'; //Uncomment for local development
+  public $root = 'http://localhost/idgs73web/arquitecturaDeSoftWare/'; //Uncomment for local development
   public $title = "APP";
   // Constructor takes "title" as parameter
   function __construct()
@@ -49,11 +49,11 @@ class Head {
 
     <!-- Local libraries | Title -->
     <title>' . $this->title . '</title>
-    <link href="' . $this->root . '/arquitecturaDeSoftWare/res/css/main.css" rel="stylesheet" type="text/css" media="all"/>
-    <script src="' . $this->root . '/arquitecturaDeSoftWare/scripts/firebase_init.js"></script>
-    <script src="' . $this->root . '/arquitecturaDeSoftWare/classes/FirebaseSchema.js"></script>
-    <script src="' . $this->root . '/arquitecturaDeSoftWare/res/assets/canvasjs.min.js"></script>
-    <script src="' . $this->root . '/arquitecturaDeSoftWare/res/assets/jquery.canvasjs.min.js"></script>
+    <link href="' . $this->root . '/res/css/main.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="' . $this->root . '/scripts/firebase_init.js"></script>
+    <script src="' . $this->root . '/classes/FirebaseSchema.js"></script>
+    <script src="' . $this->root . '/res/assets/canvasjs.min.js"></script>
+    <script src="' . $this->root . '/res/assets/jquery.canvasjs.min.js"></script>
 
 
     </head>
@@ -62,4 +62,5 @@ class Head {
 
   }
 }
+
 ?>

@@ -77,7 +77,7 @@ button:hover {
 </style>
 <body >
 
-<form action="/action_page.php" style="border:1px solid #ccc; background-color: #F5F5F5">
+<form  style="border:1px solid #ccc; background-color: #F5F5F5">
   <div class="container">
 
     

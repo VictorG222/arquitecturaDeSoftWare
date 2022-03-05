@@ -14,7 +14,7 @@ function signup(){
 
     } else {
 
-        firebase.auth().createUserWithEmailAndPassword(email, password)
+        firebase.auth().createUserWithEmailAndPassword(email, pass)
         .then((userCredential) => {
           // Signed in
           var user = userCredential.user;
