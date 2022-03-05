@@ -65,18 +65,34 @@ button:hover {
      width: 100%;
   }
 }
+
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+}
 </style>
 <body >
 
 <form action="/action_page.php" style="border:1px solid #ccc; background-color: #F5F5F5">
   <div class="container">
 
-    <img src="../res/img/bettergym.jpg" width="500" height="600">
+    
+    <img src="./res/img/bettergym.png" class="center">
 
 
     <h3>Registro de usuario</h3>
     <p>Porfavor llene el formulario de registro.</p>
     <hr>
+
+    <label for="correo"><b>Correo</b></label>
+    <input id="correo" type="text" placeholder="Ingrese su correo" name="correo" required>
+
+    <label for="pass"><b>Contraseña</b></label>
+    <input id="pass" type="password" placeholder="Ingrese su contraseña" name="pass" required>
 
     <label for="nombre"><b>Nombre</b></label>
     <input id="nombre" type="text" placeholder="Ingrese su nombre" name="nombre" required>
@@ -96,7 +112,7 @@ button:hover {
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <button id="btnSignUp" type="submit" class="signupbtn">Sign Up</button>
     </div>
   </div>
 </form>
