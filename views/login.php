@@ -74,25 +74,22 @@
 </style>
 </head>
 <body>
-
 <!--- Formulario Login --->
-<form action="/action_page.php" method="post">
+<form>
   <div class="imgcontainer">
-    <img src="./res/img/bettergym.png" alt="logo" class="center">
+    <img src="./res/img/bettergym.png" class="center">
     <h5>Inicio de sesion</h5>
   </div>
-
   <div class="container">
     <label for="correo"><b>Correo</b></label>
-    <input type="text" placeholder="Ingrese su corrreo" name="correo" required>
+    <input id="emailL" type="text" placeholder="Ingrese su corrreo" name="correo" required>
 
     <label for="pass"><b>Password</b></label>
-    <input type="password" placeholder="Ingrese su contraseña" name="pass" required>
+    <input id="passL" type="password" placeholder="Ingrese su contraseña" name="pass" required>
         
-    <button type="submit">Login</button>
-    
-  <!--- Redireccionar a registro --->
+    <button id="btnLogin" class="loginbtn">Login</button>
   </div>
+  <!--- Redireccionar a registro --->
   <div class="center">
     <p>No tienes una cuenta registrada</p>
     <button id="linkregistro">Registrate aqui</button> 

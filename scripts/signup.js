@@ -1,36 +1,35 @@
 //Evento para el registro de usuarios
 $("#btnSignUp").click(function(){
-    verificar()
+    signup()
 });
 
 //Funcion para validar contraseñas
-function verificar(pass) {
-  var pass = $("#pass").val();
-  var email = $("#correo").val();
-  
+// function verificar(pass) {
+//   var pass = $("#pass").val();
+//   var email = $("#correo").val();
 
-  var newPassword = pass
-  var minNumberofChars = 8;
-  var maxNumberofChars = 16;
-  var regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+//   var newPassword = pass
+//   var minNumberofChars = 6;
+//   var maxNumberofChars = 16;
+//   var regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
 
-  if(newPassword.length < minNumberofChars || newPassword.length > maxNumberofChars){
-      M.toast({html: 'La contraseña debe ser de entre 8 y 16 caracteres'});
-      return false;
-  }
-  if(!regularExpression.test(newPassword)) {
-      M.toast({html: 'Introdusca una contraseña valida'});
-      return false;
-  } else{
-      M.toast({html: 'Buena contraseña'});
-      signup(pass, email); 
-  }
-}
+//   if(newPassword.length < minNumberofChars || newPassword.length > maxNumberofChars){
+//       M.toast({html: 'La contraseña debe ser de entre 8 y 16 caracteres'});
+//       return false;
+//   }
+//   if(!regularExpression.test(newPassword)) {
+//       M.toast({html: 'Introdusca una contraseña valida'});
+//       return false;
+//   } else{
+//       M.toast({html: 'Buena contraseña'});
+//       signup(pass, email); 
+//   }
+// }
 
 //Funcion para hacer registro en firebase
-function signup(pass, email){
-    var pass = this.pass;
-    var email = this.email;    
+function signup(){
+  var pass = $("#pass").val();
+  var email = $("#correo").val();
   
     if( email === "" || pass === ""){
         M.toast({html: 'No se permiten campos vacios!'})
@@ -55,7 +54,6 @@ function signup(pass, email){
     }
 
 }
-
 //Metodo para redirecionar al login
 $("#linklogin").click(function(){
   redirect()

@@ -20,12 +20,12 @@ class Router {
       break;
 
       case "home":
-        $this->viewsManager->loadHome();
-        break;
+      $this->viewsManager->loadHome();
+      break;
 
       case "signup":
-        $this->viewsManager->loadSignUp();
-        break;
+      $this->viewsManager->loadSignUp();
+      break;
       
       default:
       $this->viewsManager->loadLogin();
