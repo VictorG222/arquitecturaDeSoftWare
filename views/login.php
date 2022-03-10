@@ -75,16 +75,13 @@
 </head>
 <body>
 <!--- Formulario Login --->
-<form>
-  <div class="imgcontainer">
+  <div class="container">
     <img src="./res/img/bettergym.png" class="center">
     <h5>Inicio de sesion</h5>
-  </div>
-  <div class="container">
     <label for="correo"><b>Correo</b></label>
     <input id="emailL" type="text" placeholder="Ingrese su corrreo" name="correo" required>
 
-    <label for="pass"><b>Password</b></label>
+    <label for="pass"><b>Contraseña</b></label>
     <input id="passL" type="password" placeholder="Ingrese su contraseña" name="pass" required>
         
     <button id="btnLogin" class="loginbtn">Login</button>
@@ -95,7 +92,6 @@
     <button id="linkregistro">Registrate aqui</button> 
   </div>
   <!--- Redireccionar a registro --->
-</form>
 
 </body>
 </html>

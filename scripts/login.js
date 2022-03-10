@@ -5,13 +5,13 @@ $("#btnLogin").click(function(){
 
 
 function login(){
-  var pass = $("#passL").val();
+  var password = $("#passL").val();
   var email = $("#emailL").val();   
 
-  if( email === "" || pass === ""){
+  if( email === "" || password === ""){
       M.toast({html: 'No se permiten campos vacios!'})
   } else {
-      firebase.auth().signInWithEmailAndPassword(email, pass)
+      firebase.auth().signInWithEmailAndPassword(email, password)
       .then((userCredential) => {
         // Loged In
         window.location = "?view=home";
@@ -23,10 +23,11 @@ function login(){
         M.toast({html: errorCode + ' - '+ errorMessage});
         // ..
       });
-      
   }
 
 }
+
+
 //Metodo para redirecionar al registro
 $("#linkregistro").click(function(){
     redirect()
