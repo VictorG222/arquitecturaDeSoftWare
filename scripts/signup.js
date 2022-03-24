@@ -1,3 +1,5 @@
+var api = new APISchema();
+
 //Evento para el registro de usuarios
 $("#btnSignUp").click(function(){
     signup()
@@ -30,6 +32,7 @@ $("#btnSignUp").click(function(){
 function signup(){
   var pass = $("#pass").val();
   var email = $("#correo").val();
+  var name = $("#nombre").val();
   
     if( email === "" || pass === ""){
         M.toast({html: 'No se permiten campos vacios!'})
@@ -40,8 +43,29 @@ function signup(){
           // Signed in
           var user = userCredential.user;
           var uid = user.uid;
-          M.toas({html: '' + uid});
-          window.location = "?view=login";
+
+          fetch(api.users, {
+              method: 'POST',
+              body: JSON.stringify({
+                US_name: name,
+                US_email: email,
+                UID: uid
+              }),
+              headers: {
+                "Content-type": "application/json"
+              }
+          })
+          .then(response => response.json())
+          .then(data => {
+            M.toas({html: 'Bien Venido'});
+            window.location = "?view=home";
+          })
+          .catch(err =>{
+            console.log(err);
+          });
+           
+          //M.toas({html: '' + uid});
+          //
           // ...
         })
         .catch((error) => {
@@ -57,11 +81,11 @@ function signup(){
 //Metodo para redirecionar al login
 $("#linklogin").click(function(){
   redirect()
+  window.location = "?view=login";
 });
 
 
-function redirect(){  
-  window.location = "?view=login";
+function redirect(){    
 }
 
 
