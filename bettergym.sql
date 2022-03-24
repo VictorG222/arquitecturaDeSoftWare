@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-03-2022 a las 06:38:46
+-- Tiempo de generación: 24-03-2022 a las 08:30:09
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.27
 
@@ -49,7 +49,7 @@ CREATE TABLE `users` (
   `fecha_de_renovacion` date NOT NULL,
   `estado_membresia` int(100) NOT NULL,
   `status` int(100) NOT NULL,
-  `UID` int(100) NOT NULL,
+  `UID` varchar(100) DEFAULT NULL,
   `US_email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -83,7 +83,7 @@ ALTER TABLE `entradas`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `US_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `US_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas

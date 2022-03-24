@@ -57,7 +57,7 @@ function signup(){
           })
           .then(response => response.json())
           .then(data => {
-            M.toas({html: 'Bien Venido'});
+            M.toast({html: 'Bien Venido'});
             window.location = "?view=home";
           })
           .catch(err =>{

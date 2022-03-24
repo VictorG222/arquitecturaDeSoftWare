@@ -6,7 +6,7 @@ try {
             host: 'localhost',
             user: 'root',
             password: '',
-            database: 'betterGym'
+            database: 'bettergym'
         }); 
         
         connection.connect(function(err) {              
@@ -28,13 +28,9 @@ try {
                 throw err;                                  
             }
         });
-
         module.exports = connection;
-
     }
-   
     handleDisconnect();
-
 } catch (error) {
 
 }
