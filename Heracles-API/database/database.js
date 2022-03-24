@@ -6,7 +6,7 @@ try {
             host: 'localhost',
             user: 'root',
             password: '',
-            database: 'local1'
+            database: 'betterGym'
         }); 
         
         connection.connect(function(err) {              
