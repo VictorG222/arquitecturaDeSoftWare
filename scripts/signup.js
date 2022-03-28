@@ -5,34 +5,15 @@ $("#btnSignUp").click(function(){
     signup()
 });
 
-//Funcion para validar contraseñas
-// function verificar(pass) {
-//   var pass = $("#pass").val();
-//   var email = $("#correo").val();
-
-//   var newPassword = pass
-//   var minNumberofChars = 6;
-//   var maxNumberofChars = 16;
-//   var regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
-
-//   if(newPassword.length < minNumberofChars || newPassword.length > maxNumberofChars){
-//       M.toast({html: 'La contraseña debe ser de entre 8 y 16 caracteres'});
-//       return false;
-//   }
-//   if(!regularExpression.test(newPassword)) {
-//       M.toast({html: 'Introdusca una contraseña valida'});
-//       return false;
-//   } else{
-//       M.toast({html: 'Buena contraseña'});
-//       signup(pass, email); 
-//   }
-// }
-
 //Funcion para hacer registro en firebase
 function signup(){
   var pass = $("#pass").val();
-  var email = $("#correo").val();
   var name = $("#nombre").val();
+  var apellido = $("#apellido").val();
+  var edad = $("#edad").val();
+  var sexo  = $("#sexo").val();
+  var fecha_de_renovacion = $("#fecha").val();
+  var email = $("#correo").val();
   
     if( email === "" || pass === ""){
         M.toast({html: 'No se permiten campos vacios!'})
@@ -48,6 +29,12 @@ function signup(){
               method: 'POST',
               body: JSON.stringify({
                 US_name: name,
+                US_apellido: apellido,
+                US_edad: edad,
+                US_sexo: sexo,
+                fecha_de_renovacion: fecha_de_renovacion,
+                estado_membresia: 1,
+                status: 1,
                 US_email: email,
                 UID: uid
               }),
@@ -57,10 +44,10 @@ function signup(){
           })
           .then(response => response.json())
           .then(data => {
-            M.toast({html: 'Bien Venido'});
+            M.toast({html: 'Bienvenido'});
             window.location = "?view=home";
           })
-          .catch(err =>{
+          .catch(err => {
             console.log(err);
           });
            
@@ -78,16 +65,20 @@ function signup(){
     }
 
 }
-//Metodo para redirecionar al login
-$("#linklogin").click(function(){
-  redirect()
-  window.location = "?view=login";
-});
 
 
-function redirect(){    
-}
+// //Metodo para redirecionar al login
+// $("#linklogin").click(function(){
+//   redirect()
+//   window.location = "?view=login";
+// });
+
+
+// function redirect(){    
+// }
 
 
 
 
+
+   

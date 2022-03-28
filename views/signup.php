@@ -109,7 +109,6 @@
     
 
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancelar</button>
       <button id="btnSignUp" class="signupbtn">Registrar</button>
     </div>
  
@@ -117,7 +116,7 @@
 </form>
 
 <!--- Redireccionar a login --->
-<form>
+
   <div class="container">
      
     <div class="center">
@@ -126,7 +125,7 @@
     </div>
     
   </div>
-</form>
+
 <!--- Redireccionar a login --->
 </body>
 </html>
