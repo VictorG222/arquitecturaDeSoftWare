@@ -18,19 +18,17 @@ function signup(){
     if( email === "" || pass === ""){
         M.toast({html: 'No se permiten campos vacios!'})
     } else {
-
         firebase.auth().createUserWithEmailAndPassword(email, pass)
         .then((userCredential) => {
           // Signed in
           var user = userCredential.user;
           var uid = user.uid;
-
           fetch(api.users, {
               method: 'POST',
               body: JSON.stringify({
                 US_name: name,
                 US_apellido: apellido,
-                US_edad: edad,
+                US_edad: parseInt(edad),
                 US_sexo: sexo,
                 fecha_de_renovacion: fecha_de_renovacion,
                 estado_membresia: 1,
@@ -50,10 +48,6 @@ function signup(){
           .catch(err => {
             console.log(err);
           });
-           
-          //M.toas({html: '' + uid});
-          //
-          // ...
         })
         .catch((error) => {
           var errorCode = error.code;
@@ -61,21 +55,17 @@ function signup(){
           M.toast({html: errorCode + ' - '+ errorMessage});
           // ..
         });
-        
     }
-
 }
+//Metodo para redirecionar al login
+$("#linklogin").click(function(){
+  redirect()
+  window.location = "?view=login";
+});
 
 
-// //Metodo para redirecionar al login
-// $("#linklogin").click(function(){
-//   redirect()
-//   window.location = "?view=login";
-// });
-
-
-// function redirect(){    
-// }
+function redirect(){    
+}
 
 
 

@@ -72,7 +72,7 @@
 <body >
 
 <!--- Formulario registro --->
-<form  style="border:1px solid #ccc; background-color: #F5F5F5">
+<!--- <form  style="border:1px solid #ccc; background-color: #F5F5F5"> --->
   <div class="container">
 
     
@@ -113,7 +113,7 @@
     </div>
  
   </div>
-</form>
+<!--- </form> --->
 
 <!--- Redireccionar a login --->
 
