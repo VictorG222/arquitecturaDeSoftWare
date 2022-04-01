@@ -2,21 +2,12 @@ const req = require("express/lib/request");
 
 //const connection = require("mysql/lib/Connection");
 try {
-    let userController = {};
+    let entradasController = {};
 
-    userController.addUser = async (req, res) => {
+    entradasController.addEntrada = async (req, res) => {
         if(connection){
             await connection.query(
-                "INSERT INTO users (US_name, US_apellido, US_edad, US_sexo, fecha_de_renovacion, estado_membresia, status, US_email, UID) VALUES ('"
-                + req.body.US_name +"', '"
-                + req.body.US_apellido +"', '"
-                + req.body.US_edad +"', '"
-                + req.body.US_sexo +"', '"
-                + req.body.fecha_de_renovacion +"', '"
-                + req.body.estado_membresia +"', '"
-                + req.body.status +"', '"
-                + req.body.US_email +"', '"
-                + req.body.UID +"');",
+                "INSERT INTO users (id, fecha, tipo, status) VALUES ('"+ req.body.id +"', '"+ req.body.fecha +"', '"+ req.body.tipo +"', '"+ req.body.status +"');",
                 (err, rows)=> {
                     if (err){
                         console.log(err);
@@ -28,10 +19,10 @@ try {
         }
     };
     
-    userController.getUsers = async (req, res) => {
+    entradasController.getEntradas = async (req, res) => {
         if(connection){
             await connection.query(
-                "SELECT * FROM users WHERE status="+req.params.status+" ORDER BY US_id DESC LIMIT "+req.params.limit+";",
+                "SELECT * FROM entradas WHERE status="+req.params.status+" ORDER BY US_id DESC LIMIT "+req.params.limit+";",
                 (err, rows)=> {
                     if (err){
                         console.log(err);
@@ -43,10 +34,10 @@ try {
         }
     };
 
-    userController.deleteUser = async (req, res) => {
+    entradasController.deleteEntrada = async (req, res) => {
         if(connection){
             await connection.query(
-                "DELETE FROM users WHERE US_ID="+req.params.userID+";",
+                "DELETE FROM entradas WHERE US_ID="+req.params.id+";",
                 (err, rows)=> {
                     if (err){
                         console.log(err);
@@ -57,7 +48,7 @@ try {
             );
         }
     };
-    module.exports = userController;
+    module.exports = entradasController;
 } catch (error) {
     
 }

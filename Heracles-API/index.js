@@ -29,8 +29,8 @@ try {
     //app.use(cors());     
     
     //Routes
-
     app.use('/api/users', require('./routes/users.routes'));
+    app.use('/api/entradas', require('./routes/entradas.routes'));
     
     //Server
     app.listen(port, () => {
