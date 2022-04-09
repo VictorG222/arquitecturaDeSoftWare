@@ -59,16 +59,9 @@ function signup(){
 }
 //Metodo para redirecionar al login
 $("#linklogin").click(function(){
-  redirect()
   window.location = "?view=login";
 });
 
-
-function redirect(){    
-}
-
-
-
-
-
-   
+$("#linklogin").click(function(){
+  window.location = "?view=login";
+});

@@ -75,24 +75,33 @@
 </head>
 <body>
 <!--- Formulario Login --->
-  <div class="container">
-    <img src="./res/img/bettergym.png" class="center">
-    <h5>Inicio de sesion</h5>
-    <label for="correo"><b>Correo</b></label>
-    <input id="emailL" type="text" placeholder="Ingrese su corrreo" name="correo" required>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6">
+    <div class="container">
+      <img src="./res/img/bettergym.png" class="center">
+      <h5>Inicio de sesion</h5>
+      <label for="correo"><b>Correo</b></label>
+      <input id="emailL" type="text" placeholder="Ingrese su corrreo" name="correo" required>
 
-    <label for="pass"><b>Contraseña</b></label>
-    <input id="passL" type="password" placeholder="Ingrese su contraseña" name="pass" required>
-        
-    <button id="btnLogin" class="loginbtn">Login</button>
+      <label for="pass"><b>Contraseña</b></label>
+      <input id="passL" type="password" placeholder="Ingrese su contraseña" name="pass" required>
+          
+      <button id="btnLogin" class="loginbtn">Login</button>
+    </div>
+    </div>
+    <div class="col-sm-3">
+    </div>
   </div>
+</div>
   <!--- Redireccionar a registro --->
   <div class="center">
     <p>No tienes una cuenta registrada</p>
     <button id="linkregistro">Registrate aqui</button> 
   </div>
   <!--- Redireccionar a registro --->
-
 </body>
 </html>
 

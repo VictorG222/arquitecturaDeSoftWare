@@ -7,7 +7,7 @@ try {
     entradasController.addEntrada = async (req, res) => {
         if(connection){
             await connection.query(
-                "INSERT INTO users (id, fecha, tipo, status) VALUES ('"+ req.body.id +"', '"+ req.body.fecha +"', '"+ req.body.tipo +"', '"+ req.body.status +"');",
+                "INSERT INTO entradas (fecha, tipo, status) VALUES ('"+ req.body.fecha +"', '"+ req.body.tipo +"', '"+ req.body.status +"');",
                 (err, rows)=> {
                     if (err){
                         console.log(err);
@@ -22,7 +22,7 @@ try {
     entradasController.getEntradas = async (req, res) => {
         if(connection){
             await connection.query(
-                "SELECT * FROM entradas WHERE status="+req.params.status+" ORDER BY US_id DESC LIMIT "+req.params.limit+";",
+                "SELECT * FROM entradas WHERE status="+req.params.status+" ORDER BY tipo DESC LIMIT "+req.params.limit+";",
                 (err, rows)=> {
                     if (err){
                         console.log(err);
@@ -37,7 +37,7 @@ try {
     entradasController.deleteEntrada = async (req, res) => {
         if(connection){
             await connection.query(
-                "DELETE FROM entradas WHERE US_ID="+req.params.id+";",
+                "DELETE FROM entradas WHERE id="+req.params.id+";",
                 (err, rows)=> {
                     if (err){
                         console.log(err);
