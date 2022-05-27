@@ -23,10 +23,26 @@ class Router {
       $this->viewsManager->loadHome();
       break;
 
+      case "top":
+      $this->viewsManager->loadTop();
+      break;
+
+      case "trending":
+      $this->viewsManager->loadTrending();
+      break;
+
+      case "fresh":
+      $this->viewsManager->loadFresh();
+      break;
+
+      case "contact":
+      $this->viewsManager->loadContact();
+      break;
+
       case "signup":
       $this->viewsManager->loadSignUp();
       break;
-      
+
       default:
       $this->viewsManager->loadLogin();
       break;

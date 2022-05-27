@@ -6,11 +6,12 @@
 <body >
 <br><br><br>
 <!--- HTML PARA REGISTRAR NUEVAS ENTRADAS--->
+
 <div class="container">
   <div class="row">
     <div class="col-sm">
     </div>
-    <div class="col-sm">             
+    <div class="col-sm">
       <h4 class="center">Registrar nueva entrada</h4>
       <input id="postFecha" type="date"  placeholder="Fecha de registro" required>
       <select id="postTipo" style="display: block;">
@@ -76,24 +77,12 @@
                         </thead>
                         <tbody id="idBody" style="border: none;">
                         </tbody>
-                  </table>    
+                  </table>
     </div>
     <div class="col-sm-1">
     </div>
   </div>
 </div>
-
-
-
-        
-
-
-
-
-
-
-
-
 
 </body>
 </html>

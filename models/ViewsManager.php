@@ -22,6 +22,18 @@ class ViewsManager
     } else if($fileName == "home.php"){
       $this->generateAdminBody();
     }
+    else if($fileName == "top.php"){
+      $this->generateAdminBody();
+    }
+    else if($fileName == "fresh.php"){
+      $this->generateAdminBody();
+    }
+    else if($fileName == "trending.php"){
+      $this->generateAdminBody();
+    }
+    else if($fileName == "contactus.php"){
+      $this->generateAdminBody();
+    }
 
   }
 
@@ -75,5 +87,26 @@ class ViewsManager
     $this->head->setTitle("Registro de usuarios");
     $this->setFileName("signup.php");
   }
+
+  function loadTrending(){
+    $this->head->setTitle("Trending");
+    $this->setFileName("trending.php");
+  }
+
+  function loadTop(){
+    $this->head->setTitle("Top");
+    $this->setFileName("top.php");
+  }
+
+  function loadFresh(){
+    $this->head->setTitle("Fresh");
+    $this->setFileName("fresh.php");
+  }
+
+  function loadContact(){
+    $this->head->setTitle("Contact Us");
+    $this->setFileName("contactus.php");
+  }
+
 }
 ?>

@@ -1,9 +1,56 @@
 <!DOCTYPE html>
 <html>
 <style>
+* {
+  padding: 0;
+  margin: 0;
+}
+p {
+  margin-bottom: 20px;
+}
+.wrapper {
+  width: 80%;
+  margin: auto;
+  overflow:hidden;
+}
+header {
+  background: rgba(0,0,0,0.9);
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+}
+a {
+  font-size: 40px;
+  font-weight:bold;  /* Desplazamos el nav hacia la izquierda */
+}
+nav ul {
+  list-style: none;
+  overflow: hidden; /* Limpiamos errores de float */
+}
+nav ul li {
+  float: left;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #000;
+
+}
+nav ul li {
+  display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+nav ul li:hover {
+  background: #2b302d;
+}
+.contenido {
+  padding-top: 80px;
+}
 </style>
 <body >
-<nav style="background-color: #1D1C1C">
+<!-- <nav style="background-color: #1D1C1C">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center"><img src="./res/img/bettergym.png" class="center" style="width: 25%;"></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -13,8 +60,24 @@
       </ul>
     </div>
     <button id="btnLogOut" class="btn right" style="background-color: #77B64D; color: #1D1C1C">Cerrar sesion</button>
-    
-  </nav>
+
+  </nav> -->
+
+  <header>
+  <section class="wrapper">
+		<nav style="background-color: #000;   min-height: 100px;" >
+			<ul>
+				<li id="home">
+          <img src="./res/img/logo.png" alt="9gag"id="itemImg" width="60">
+        </li>
+        <li id="trending">Trending</li>
+        <li id="fresh">Fresh</li>
+        <li id="top">Top</li>
+        <li id="contact">Contact us</li>
+			</ul>
+    </nav>
+    </section>
+</header>
 </body>
 </html>
 

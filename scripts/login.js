@@ -6,7 +6,7 @@ $("#btnLogin").click(function(){
 
 function login(){
   var password = $("#passL").val();
-  var email = $("#emailL").val();   
+  var email = $("#emailL").val();
 
   if( email === "" || password === ""){
       M.toast({html: 'No se permiten campos vacios!'})
@@ -29,10 +29,10 @@ function login(){
 
 
 //Metodo para redirecionar al registro
-$("#linkregistro").click(function(){
-    redirect()
+$("#top").click(function(){
+    redirecttop()
 });
 
-function redirect(){  
-  window.location = "?view=signup";
+function redirecttop(){
+  window.location = "?view=top";
 }
