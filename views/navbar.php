@@ -1,5 +1,7 @@
-<!DOCTYPE html>
-<html>
+<?php
+  $view = $_GET['view'];
+?>
+
 <style>
 * {
   padding: 0;
@@ -7,6 +9,11 @@
 }
 p {
   margin-bottom: 20px;
+}
+
+.breadcrumb{
+  display: inline;
+  padding: 0 1rem;
 }
 .wrapper {
   width: 80%;
@@ -20,10 +27,9 @@ header {
   z-index: 10;
 }
 
-}
 a {
   font-size: 40px;
-  font-weight:bold;  /* Desplazamos el nav hacia la izquierda */
+  font-weight:bold;  Desplazamos el nav hacia la izquierda
 }
 nav ul {
   list-style: none;
@@ -49,7 +55,6 @@ nav ul li:hover {
   padding-top: 80px;
 }
 </style>
-<body >
 <!-- <nav style="background-color: #1D1C1C">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center"><img src="./res/img/bettergym.png" class="center" style="width: 25%;"></a>
@@ -62,13 +67,13 @@ nav ul li:hover {
     <button id="btnLogOut" class="btn right" style="background-color: #77B64D; color: #1D1C1C">Cerrar sesion</button>
 
   </nav> -->
+<div class="nav-wrapper">
 
-  <header>
-  <section class="wrapper">
+
 		<nav style="background-color: #000;   min-height: 100px;" >
 			<ul>
 				<li id="home">
-          <img src="./res/img/logo.png" alt="9gag"id="itemImg" width="60">
+          <img src="./res/img/bettergym.png" alt="bettergym"id="itemImg" width="100">
         </li>
         <li id="trending">Trending</li>
         <li id="fresh">Fresh</li>
@@ -76,10 +81,42 @@ nav ul li:hover {
         <li id="contact">Contact us</li>
 			</ul>
     </nav>
-    </section>
-</header>
-</body>
-</html>
+    <h5 class="hiddenView" id="<?php if($view) echo $view ?>"></h5>
 
+
+  <nav style="background-color: #000;   min-height: 50px;">
+      <div class="nav-wrapper">
+        <!-- Home -->
+        <div class="col s12" id="breadcrumbHome" style="display: none;">
+          <a href="?view=home" class="breadcrumb">Home</a>
+        </div>
+
+        <!-- Trending -->
+        <div class="col s12" id="breadcrumbTrending" style="display: none;">
+          <a href="?view=home" class="breadcrumb">Home</a>
+          <a href="?view=trending" class="breadcrumb">Trending</a>
+        </div>
+
+        <!-- Fresh -->
+        <div class="col s12" id="breadcrumbFresh" style="display: none;">
+          <a href="?view=home" class="breadcrumb">Home</a>
+          <a href="?view=fresh" class="breadcrumb">Fresh</a>
+        </div>
+
+        <!-- Top -->
+        <div class="col s12" id="breadcrumbTop" style="display: none;">
+          <a href="?view=home" class="breadcrumb">Home</a>
+          <a href="?view=top" class="breadcrumb">Top</a>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="col s12" id="breadcrumbContact" style="display: none;">
+          <a href="?view=home" class="breadcrumb">Home</a>
+          <a href="?view=contact" class="breadcrumb">Contact Us</a>
+        </div>
+      </div>
+  </nav>
+
+  </div>
 
 <script src="./scripts/navbar.js?v1.0.0"></script>
