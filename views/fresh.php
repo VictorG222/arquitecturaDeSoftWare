@@ -12,7 +12,7 @@
   <br>
   <br>
   <br>
-  <p>FRESH</p>
+  <h1>FRESH</h1>
   <br>
   <br>
   <br>

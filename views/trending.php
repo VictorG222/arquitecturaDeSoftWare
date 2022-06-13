@@ -12,7 +12,7 @@
   <br>
   <br>
   <br>
-  <p>TRENDING</p>
+  <h1>TRENDING</h1>
   <br>
   <br>
   <br>

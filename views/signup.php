@@ -45,7 +45,7 @@
 
   /* Add padding to container elements */
   .container {
-    padding: 16px;
+    padding: 10%;
   }
 
   /* Clear floats */
@@ -106,12 +106,25 @@
 
     <label for="fecha"><b>Fecha de registro</b></label>
     <input id="fecha" type="date"  name="fecha" required>
-    
 
+    <!-- reCAPTCHA -->
+    <br>
+    <div class="center">
+    <div class="g-recaptcha" data-sitekey="6LdgmmYgAAAAAGtyleY4XA0D4yI-_bQlOAyPWIJY" data-callback="verifyCaptcha"></div>
+    <p id="g-recaptcha-error" style="color:red; display: none;">Esta validación es requerida.</p>
+    <br>
+    <a class="waves-effect waves-light btn" id="submitForm" style="width: 32%;">Enviar</a>
+
+    <script async src="https://www.google.com/recaptcha/api.js"></script>
+    <script type="text/javascript" src="./scripts/home.js?v1.0.0"></script>
+    </div>
+
+ 
+<!-- 
     <div class="clearfix">
       <button id="btnSignUp" class="signupbtn">Registrar</button>
     </div>
- 
+  -->
   </div>
 <!--- </form> --->
 

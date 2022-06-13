@@ -13,7 +13,7 @@
   <br>
   <br>
   <br>
-  <p>CONTACT US</p>
+  <h1>CONTACT US</h1>
   <br>
   <br>
   <br>

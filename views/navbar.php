@@ -29,7 +29,9 @@ header {
 
 a {
   font-size: 40px;
-  font-weight:bold;  Desplazamos el nav hacia la izquierda
+  font-weight:bold;
+  font-style: normal;
+  
 }
 nav ul {
   list-style: none;

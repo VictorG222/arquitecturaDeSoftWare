@@ -3,7 +3,9 @@
 */
 class Head {
   // Globar parameters
-  public $root = 'http://localhost/idgs73web/arquitecturaDeSoftWare/'; //Uncomment for local development
+
+  public $root = 'http://localhost/idgs73web/arquitecturaDeSoftWare/';
+  // public $root = 'https://bettergymvictor.000webhostapp.com/'; //Uncomment for local development
   public $title = "APP";
   // Constructor takes "title" as parameter
   function __construct()
@@ -27,7 +29,7 @@ class Head {
     <meta http-equiv="Last-Modified" content="0">
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
-    
+
     <!-- External libraries -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
@@ -41,11 +43,11 @@ class Head {
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
+
     <!-- Firebase libraries -->
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
-    
+
     <!-- Bootstrap libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
