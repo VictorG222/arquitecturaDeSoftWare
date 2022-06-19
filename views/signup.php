@@ -75,7 +75,7 @@
 <!--- <form  style="border:1px solid #ccc; background-color: #F5F5F5"> --->
   <div class="container">
 
-    
+
     <img src="./res/img/bettergym.png" class="center">
 
 
@@ -108,7 +108,7 @@
     <input id="fecha" type="date"  name="fecha" required>
 
     <!-- reCAPTCHA -->
-    <br>
+    <!-- <br>
     <div class="center">
     <div class="g-recaptcha" data-sitekey="6LdgmmYgAAAAAGtyleY4XA0D4yI-_bQlOAyPWIJY" data-callback="verifyCaptcha"></div>
     <p id="g-recaptcha-error" style="color:red; display: none;">Esta validación es requerida.</p>
@@ -117,26 +117,26 @@
 
     <script async src="https://www.google.com/recaptcha/api.js"></script>
     <script type="text/javascript" src="./scripts/home.js?v1.0.0"></script>
-    </div>
+    </div> -->
 
- 
-<!-- 
+
+
     <div class="clearfix">
       <button id="btnSignUp" class="signupbtn">Registrar</button>
     </div>
-  -->
+
   </div>
 <!--- </form> --->
 
 <!--- Redireccionar a login --->
 
   <div class="container">
-     
+
     <div class="center">
     <p>Ya tienes una cuenta registrada</p>
-    <button id="linklogin">Inicia sesion aqui</button> 
+    <button id="linklogin">Inicia sesion aqui</button>
     </div>
-    
+
   </div>
 
 <!--- Redireccionar a login --->

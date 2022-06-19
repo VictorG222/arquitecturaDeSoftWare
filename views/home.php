@@ -7,6 +7,46 @@
 <br><br><br>
 <!--- HTML PARA REGISTRAR NUEVAS ENTRADAS--->
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div id="dom">
+        <select id="accionDom" style="display: block;"  >
+          <option value="create">Agregar</option>
+          <option value="edit">Editar</option>
+          <option value="delete">Eliminar</option>
+        </select>
+      
+        <input id="position" type="text" placeholder="Posicion" name="position" required>
+        <input id="valor" type="text" placeholder="Valor" name="valor" required>
+
+        <button id="btnDom" class="btn" style="background-color: #77B64D; color: #1D1C1C" onclick="dom()">Modificar</button>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <h5>1</h5>
+  <h5>2</h5>
+  <h5>3</h5>
+  <h5>4</h5>
+  <h5>5</h5>
+  <h5>6</h5>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <br>
 <br>
@@ -35,7 +75,7 @@
           <option value="3">3</option>
           <option value="4">4</option>
         </select>
-      <button id="btnRegistrar" class="btn" style="background-color: #77B64D; color: #1D1C1C">Registrar</button>
+      <button id="btnRegistrar" class="btn" style="background-color: #77B64D; color: #1D1C1C" onclick="dom()">Registrar</button>
     </div>
     <div class="col-sm">
     </div>
