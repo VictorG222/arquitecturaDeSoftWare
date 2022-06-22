@@ -96,33 +96,43 @@ function deleteEntrada(id) {
   }
 }
 
-
 // Funcionalidad del dominio del DOOM  
 $(document).ready(function(){
   $('#dom').find('h5').eq(2).html('Tercer elemento modificado').end();
-  console.log('Ready!!!');
+
+  var encabezados = $('#dom').find('h5').length;
+  listarEncabezados(encabezados);
 });
 
 function dom(){
-  var position = $('#position').val();
   var valor = $('#valor').val();
   var accion = $("#accionDom").val();
   
   Encabezado(position, valor, accion);
-
+  var encabezados = $('#dom').find('h5').length;
+  $('#position').empty();
+  listarEncabezados(encabezados);
+  
   $('#position').val('');
   $('#valor').val('');
 }
 
 function Encabezado(position, valor, accion){
+  var position = $('#position').val();
   if(accion == 'create'){
-    $('#dom').find('h5').eq(position).append('<h5>'+valor+'</h5>').end();
+    $('#dom').find('h5').eq(position).appendTo('<h5>'+valor+'</h5>');
   } else if(accion == 'edit'){
     $('#dom').find('h5').eq(position).html(valor).end();
   } else if(accion == 'delete'){
     $('#dom').find('h5').eq(position).remove().end();
   }
+}
 
-  console.log(position, valor, accion);
+function listarEncabezados(encabezados){
+  for (let i = 0; i < encabezados; i++) {
+    var varlorEncabezado = $('#dom').find('h5').eq(i).text();
+    console.log(varlorEncabezado);
+    $('#position').append('<option value="'+i+'">'+varlorEncabezado+'</option>').end();
+  }
 }
 

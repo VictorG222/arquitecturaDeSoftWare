@@ -17,16 +17,21 @@
 
 
 <div id="dom">
+        <h6>Accion</h6>
         <select id="accionDom" style="display: block;"  >
           <option value="create">Agregar</option>
           <option value="edit">Editar</option>
           <option value="delete">Eliminar</option>
         </select>
+
+        <h6>Posicion</h6>
+        <select id="position" style="display: block;" class="selDiv">
+        </select>
       
-        <input id="position" type="text" placeholder="Posicion" name="position" required>
+        <h6>Valor</h6>
         <input id="valor" type="text" placeholder="Valor" name="valor" required>
 
-        <button id="btnDom" class="btn" style="background-color: #77B64D; color: #1D1C1C" onclick="dom()">Modificar</button>
+        <button id="btnDom" class="btn" style="background-color: #77B64D; color: #1D1C1C" onclick="dom()">ACCION</button>
 
   <br>
   <br>
