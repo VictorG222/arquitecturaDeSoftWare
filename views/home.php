@@ -11,30 +11,35 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-
-
-<div id="dom">
+<div id="dom" style="padding: 5%;">
         <h6>Accion</h6>
-        <select id="accionDom" style="display: block;"  >
-          <option value="create">Agregar</option>
-          <option value="edit">Editar</option>
-          <option value="delete">Eliminar</option>
-        </select>
+          <select id="accionDom" style="display: block;" onchange="mostrar()">
+            <option value="create" >Agregar</option>
+            <option value="edit" >Editar</option>
+            <option value="delete" >Eliminar</option>
+            <option value="color" >Color</option>
+          </select>
+        <br>
 
-        <h6>Posicion</h6>
-        <select id="position" style="display: block;" class="selDiv">
-        </select>
+        <h6 id="hPosition">Posicion</h6>
+          <select id="position" style="display: block;" class="selDiv">
+          </select>
+        <br>
       
-        <h6>Valor</h6>
+        <h6 id="hValor">Valor</h6>
         <input id="valor" type="text" placeholder="Valor" name="valor" required>
+        <br>
+
+        <h6 id="hColor" style="display: none;">Color</h6>
+        <select id="color" style="display: block; display: none;"  >
+          <option value="black">Negro</option>
+          <option value="green">Verde</option>
+          <option value="blue">Azul</option>
+          <option value="red">Rojo</option>
+        </select>
 
         <button id="btnDom" class="btn" style="background-color: #77B64D; color: #1D1C1C" onclick="dom()">ACCION</button>
 
-  <br>
-  <br>
   <br>
   <br>
   <h5>1</h5>
@@ -45,18 +50,6 @@
   <h5>6</h5>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>
