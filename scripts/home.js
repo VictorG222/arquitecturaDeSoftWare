@@ -1,6 +1,5 @@
 
 var api = new EntradaSchema();
-listar();
 // Detectar sesión activa
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
@@ -96,18 +95,21 @@ function deleteEntrada(id) {
   }
 }
 
-// Funcionalidad del dominio del DOOM  
-$(document).ready(function(){
-  $('#dom').find('h5').eq(2).html('Tercer elemento modificado').end();
 
+// Funcionalidad del dominio del DOOM  
+$('#dom').ready(function(){
+  $('#dom').find('h5').eq(2).html('Tercer elemento modificado').end();
   var encabezados = $('#dom').find('h5').length;
+  var accion = $('#accionDom').val();
   listarEncabezados(encabezados);
+  mostrar(accion);
 });
 
 function dom(){
   var valor = $('#valor').val();
-  var accion = $("#accionDom").val();
-  
+  var accion = $('#accionDom').val();
+  var position = $('#position').val();
+ 
   Encabezado(position, valor, accion);
   var encabezados = $('#dom').find('h5').length;
   $('#position').empty();
@@ -118,21 +120,70 @@ function dom(){
 }
 
 function Encabezado(position, valor, accion){
-  var position = $('#position').val();
+  console.log(accion);
   if(accion == 'create'){
-    $('#dom').find('h5').eq(position).appendTo('<h5>'+valor+'</h5>');
+    // $('#dom').find('h5').eq(position).appendTo('<h5>'+valor+'</h5>');
+    // $('#dom').find('h5').appendTo(position);
+    $('#dom').append('<h5>'+valor+'</h5>');
   } else if(accion == 'edit'){
     $('#dom').find('h5').eq(position).html(valor).end();
   } else if(accion == 'delete'){
     $('#dom').find('h5').eq(position).remove().end();
+  } else if(accion == 'color'){
+    var color = $('#color').val();
+    $('#dom').find('h5').eq(position).css({'color': color});
   }
 }
 
 function listarEncabezados(encabezados){
   for (let i = 0; i < encabezados; i++) {
     var varlorEncabezado = $('#dom').find('h5').eq(i).text();
-    console.log(varlorEncabezado);
     $('#position').append('<option value="'+i+'">'+varlorEncabezado+'</option>').end();
   }
 }
 
+function mostrar(){
+  var accion = $('#accionDom').val();
+  console.log(accion);
+  if (accion == 'edit'){
+    // Ocultar la seleccion del color
+    $('#color').css({'display':'none'})
+    $('#hColor').css({'display':'none'});
+    // Mostrar la selecion de la posicion
+    $('#position').css({'display':'inline'});
+    $('#hPosition').css({'display':'inline'});
+    // Mostrar el campo para el valor
+    $('#valor').css({'display':'inline'});
+    $('#hValor').css({'display':'inline'});
+  } else if (accion == 'create'){
+    // Ocultar la seleccion del color
+    $('#color').css({'display':'none'})
+    $('#hColor').css({'display':'none'});
+    // Mostrar la selecion de la posicion
+    $('#position').css({'display':'none'});
+    $('#hPosition').css({'display':'none'});
+    // Mostrar el campo para el valor
+    $('#valor').css({'display':'inline'});
+    $('#hValor').css({'display':'inline'});  
+  } else if (accion == 'color'){
+    // Mostar la seleccion del color
+    $('#color').css({'display':'inline'});
+    $('#hColor').css({'display':'inline'});
+    // Ocultar el campo para el valor
+    $('#valor').css({'display':'none'});
+    $('#hValor').css({'display':'none'});
+    // Ocultar el campo para la posicion
+    $('#position').css({'display':'inline'});
+    $('#hPosition').css({'display':'inline'});
+    } else {
+    // Ocultar el campo para el valor
+    $('#valor').css({'display':'none'});
+    $('#hValor').css({'display':'none'});
+    // Ocultar la seleccion del color
+    $('#color').css({'display':'none'});
+    $('#hColor').css({'display':'none'});
+    // Mostrar la selecion de la posicion
+    $('#position').css({'display':'inline'});
+    $('#hPosition').css({'display':'inline'});
+  }
+}
