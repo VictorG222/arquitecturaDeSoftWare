@@ -1,13 +1,13 @@
 
 var api = new EntradaSchema();
 // Detectar sesión activa
-firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    var uid = user.uid;
-  } else {
-      window.location = "?view=login";
-  }
-});
+// firebase.auth().onAuthStateChanged((user) => {
+//   if (user) {
+//     var uid = user.uid;
+//   } else {
+//       window.location = "?view=login";
+//   }
+// });
 
 $("#btnRegistrar").click(function(){
   register()
@@ -105,6 +105,20 @@ $('#dom').ready(function(){
   mostrar(accion);
 });
 
+
+$('#valor').keypress(function(e){
+  var code = (e.keyCode);
+  if (code == 13){
+    console.log(code);
+    console.log('Shift');
+    dom();
+  }else{
+    console.log('Valor presionado '+code+'');
+  }
+});
+
+
+
 function dom(){
   var valor = $('#valor').val();
   var accion = $('#accionDom').val();
@@ -147,43 +161,56 @@ function mostrar(){
   console.log(accion);
   if (accion == 'edit'){
     // Ocultar la seleccion del color
-    $('#color').css({'display':'none'})
-    $('#hColor').css({'display':'none'});
+    $('#color').fadeOut(800)
+    $('#hColor').fadeOut(800)
     // Mostrar la selecion de la posicion
-    $('#position').css({'display':'inline'});
-    $('#hPosition').css({'display':'inline'});
+    $('#position').fadeIn(400)
+    $('#hPosition').fadeIn(400)
     // Mostrar el campo para el valor
-    $('#valor').css({'display':'inline'});
-    $('#hValor').css({'display':'inline'});
+    $('#valor').fadeIn(400)
+    $('#hValor').fadeIn(400)
   } else if (accion == 'create'){
     // Ocultar la seleccion del color
-    $('#color').css({'display':'none'})
-    $('#hColor').css({'display':'none'});
+    $('#color').fadeOut(800)
+    $('#hColor').fadeOut(800)
     // Mostrar la selecion de la posicion
-    $('#position').css({'display':'none'});
-    $('#hPosition').css({'display':'none'});
+    $('#position').fadeIn(400)
+    $('#hPosition').fadeIn(400)
     // Mostrar el campo para el valor
-    $('#valor').css({'display':'inline'});
-    $('#hValor').css({'display':'inline'});  
+    $('#valor').fadeIn(400) 
+    $('#hValor').fadeIn(400)
   } else if (accion == 'color'){
     // Mostar la seleccion del color
-    $('#color').css({'display':'inline'});
-    $('#hColor').css({'display':'inline'});
+    $('#color').fadeIn(400)
+    $('#hColor').fadeIn(400)
     // Ocultar el campo para el valor
-    $('#valor').css({'display':'none'});
-    $('#hValor').css({'display':'none'});
+    $('#valor').fadeOut(800)
+    $('#hValor').fadeOut(800)
     // Ocultar el campo para la posicion
-    $('#position').css({'display':'inline'});
-    $('#hPosition').css({'display':'inline'});
+    $('#position').fadeOut(800)
+    $('#hPosition').fadeOut(800)
     } else {
     // Ocultar el campo para el valor
-    $('#valor').css({'display':'none'});
-    $('#hValor').css({'display':'none'});
+    $('#valor').fadeOut(800)
+    $('#hValor').fadeOut(800)
     // Ocultar la seleccion del color
-    $('#color').css({'display':'none'});
-    $('#hColor').css({'display':'none'});
+    $('#color').fadeOut(800)
+    $('#hColor').fadeOut(800)
     // Mostrar la selecion de la posicion
-    $('#position').css({'display':'inline'});
-    $('#hPosition').css({'display':'inline'});
+    $('#position').fadeIn(400)
+    $('#hPosition').fadeIn(400)
   }
 }
+
+
+
+$(document).scroll(function() {
+  var sv = $(document).scrollTop();
+  if (sv >= 50 && sv <= 90){
+    alert('Posicion '+sv+'');
+  } else{
+
+  }
+  
+});
+
