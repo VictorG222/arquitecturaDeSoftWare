@@ -31,6 +31,7 @@ try {
     //Routes
     app.use('/api/users', require('./routes/users.routes'));
     app.use('/api/entradas', require('./routes/entradas.routes'));
+    app.use('/api/paypal', require('./routes/paypal.routes'));
     
     //Server
     app.listen(port, () => {
