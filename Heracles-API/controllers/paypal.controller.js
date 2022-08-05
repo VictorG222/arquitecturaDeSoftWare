@@ -7,7 +7,7 @@ try {
     paypalController.addPaypal = async (req, res) => {
         if(connection){
             await connection.query(
-                "INSERT INTO paypal_order (paypal_payer_id, paypal_payer_email, paypal_country_code, paypal_amount, paypal_currency, status, created_date) VALUES ('"+ req.body.paypal_order_id 
+                "INSERT INTO paypal_order (paypal_order_id, paypal_payer_id, paypal_payer_email, paypal_country_code, paypal_amount, paypal_currency, status, created_date) VALUES ('"+ req.body.paypal_order_id 
                 +"', '"+ req.body.paypal_payer_id 
                 +"', '"+ req.body.paypal_payer_email 
                 +"', '"+ req.body.paypal_country_code 
