@@ -56,15 +56,14 @@
                   <table class="black-text">
                   <thead>
                         <tr>
-                              <th width="20%" id="idPago">ID</th>
-                              <th width="20%">ORDER ID</th>
-                              <th width="20%">PAYER ID</th>
-                              <th width="20%">PAYER EMAIL</th>
-                              <th width="20%">COUNTRY CODE</th>
-                              <th width="20%">AMOUNT</th>
-                              <th width="20%">CURRENCY</th>
-                              <th width="20%">STATUS</th>
-                              <th width="20%">DATE</th>
+                              <th width="10%">ORDER ID</th>
+                              <th width="10%">PAYER ID</th>
+                              <th width="10%">PAYER EMAIL</th>
+                              <th width="10%">COUNTRY CODE</th>
+                              <th width="10%">AMOUNT</th>
+                              <th width="10%">CURRENCY</th>
+                              <th width="10%">STATUS</th>
+                              <th width="10%">DATE</th>
                         </tr>
                         </thead>
                         <tbody id="idBody" style="border: none;">

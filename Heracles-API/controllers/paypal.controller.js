@@ -29,7 +29,7 @@ try {
     paypalController.getPaypal = async (req, res) => {
         if(connection){
             await connection.query(
-                "SELECT * FROM paypal_order WHERE (created_date > "+req.params.fecha_inicial+" AND created_date < "+req.params.fecha_final+")",
+                "SELECT * FROM paypal_order WHERE created_date > "+req.params.fecha_inicial+" AND created_date < "+req.params.fecha_final+";",
                 (err, rows)=> {
                     if (err){
                         console.log(err);
