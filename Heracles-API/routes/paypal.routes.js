@@ -4,7 +4,7 @@ try {
     const paypalController = require('../controllers/paypal.controller');
 
     router.post('/', paypalController.addPaypal);
-    router.get('/', paypalController.getPaypal);
+    router.get('/:fecha_inicial/:fecha_final', paypalController.getPaypal);
 
     module.exports = router;
 
