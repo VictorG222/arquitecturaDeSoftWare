@@ -21,7 +21,7 @@
         <div id="paypal-button-container"></div>
       </div>
     </div>
-  <script src="https://www.paypal.com/sdk/js?client-id=AeUHiiTZb9g3omOMjgombubbfzt4S4-9xqx2HOQCTXJVR-gi2CKW4hel9PwouqL5Dd_H6w5PsyKoFUJH&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
   <script>
   
   </script>
