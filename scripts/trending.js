@@ -32,17 +32,18 @@ function initPayPalButton() {
           // Full available details
           console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
 
+          var paypal_order_id = orderData.paypal_order_id;
+          var paypal_payer_id = orderData.paypal_payer_id;
+          var paypal_payer_email = orderData.paypal_payer_email ;
+          var paypal_country_code = orderData.paypal_country_code;
+          var paypal_amount = orderData.paypal_amount;
+          var paypal_currency = orderData.paypal_currency;
+          var status = orderData.status;
+          var created_date = orderData.created_date;
+
+          register(paypal_order_id, paypal_payer_id, paypal_payer_email, paypal_country_code, paypal_amount, paypal_currency, status, created_date);
           
           function register(){
-            var paypal_order_id = orderData.paypal_order_id;
-            var paypal_payer_id = orderData.paypal_payer_id;
-            var paypal_payer_email = orderData.paypal_payer_email ;
-            var paypal_country_code = orderData.paypal_country_code;
-            var paypal_amount = orderData.paypal_amount;
-            var paypal_currency = orderData.paypal_currency;
-            var status = orderData.status;
-            var created_date = orderData.created_date;
-        
             fetch(api.paypal_order, {
               method: 'POST',
               body: JSON.stringify({
@@ -54,8 +55,6 @@ function initPayPalButton() {
                   paypal_currency: paypal_currency,
                   status: parseInt(status),
                   created_date: created_date
-        
-                  
               }),
               headers: {
                 "Content-type": "application/json"
@@ -71,9 +70,6 @@ function initPayPalButton() {
               })
         
             }
-
-
-
           // Show a success message within this page, e.g.
           const element = document.getElementById('paypal-button-container');
           element.innerHTML = '';
