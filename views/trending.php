@@ -21,7 +21,7 @@
         <div id="paypal-button-container"></div>
       </div>
     </div>
-  <script src="https://www.paypal.com/sdk/js?client-id=&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=AduSjW8CSmidtswRQZcEZ9H8_VgPI-0afRgMuwhkAm0WA-RCnnuDoJ3qtdDdIUwT8ISIIzk_lnsJS1Ex&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
   <script>
   
   </script>
@@ -49,9 +49,9 @@
 <!--- TABLA PARA LISTAR PAGOS--->
 <div class="container">
   <div class="row">
-    <div class="col-sm-2">
+    <div class="col-sm-0">
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-12">
             <h4 class="center">Pagos registradas</h4>
                   <table class="black-text">
                   <thead>
@@ -70,7 +70,7 @@
                         </tbody>
                   </table>
     </div>
-    <div class="col-sm-1">
+    <div class="col-sm-0">
     </div>
   </div>
 </div>

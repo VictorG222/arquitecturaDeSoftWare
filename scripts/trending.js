@@ -2,6 +2,7 @@
 var api = new PaypalSchema();
 
 function listar(){
+  $("#idBody").empty();
   var fecha_inicial = $("#inputInicial").val();
   var fecha_final = $("#inputFinal").val();
     toString(fecha_inicial);
@@ -30,17 +31,17 @@ function initPayPalButton() {
         return actions.order.capture().then(function(orderData) {
           
           // Full available details
-          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-
-          var paypal_order_id = orderData.paypal_order_id;
-          var paypal_payer_id = orderData.paypal_payer_id;
-          var paypal_payer_email = orderData.paypal_payer_email ;
-          var paypal_country_code = orderData.paypal_country_code;
-          var paypal_amount = orderData.paypal_amount;
-          var paypal_currency = orderData.paypal_currency;
+          var paypal_order_id = orderData.id;
+          var paypal_payer_id = orderData.payer.payer_id;
+          var paypal_payer_email = orderData.payer.email_address ;
+          var paypal_country_code = orderData.payer.address.country_code;
+          var paypal_amount = orderData.purchase_units[0].amount.value;
+          var paypal_currency = orderData.purchase_units[0].amount.currency_code;
           var status = orderData.status;
-          var created_date = orderData.created_date;
-
+          if (status == "COMPLETED"){
+            status = 1;
+          }
+          var created_date = orderData.create_time;
           register(paypal_order_id, paypal_payer_id, paypal_payer_email, paypal_country_code, paypal_amount, paypal_currency, status, created_date);
           
           function register(){
