@@ -75,12 +75,12 @@
                   <table class="black-text">
                   <thead>
                         <tr>
-                              <th width="20%" id="idProcuto">ID</th>
+                              <th width="5%" id="idProcuto">ID</th>
                               <th width="20%">NAME</th>
-                              <th width="20%">PRICE</th>
-                              <th width="20%">IMAGE</th>
-                              <th width="20%">STOCK</th>
-                              <th width="20%">STATS</th>
+                              <th width="10%">PRICE</th>
+                              <th width="30%">IMAGE</th>
+                              <th width="5%">STOCK</th>
+                              <th width="5%">STATS</th>
                               <th width="20%">DATE</th>
                         </tr>
                         </thead>

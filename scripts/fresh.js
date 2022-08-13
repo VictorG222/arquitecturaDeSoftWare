@@ -82,6 +82,7 @@ function metodoAppend (doc) {
       '<td>' + doc.stats+ '</td>' + 
       '<td>' + getDate(doc) + '</td>' +
       '<td><button id="btnEliminar" class="btn btn-danger" onclick="deleteEntrada('+doc.id+')">Eliminar</button></td>' +
+      '<td><button id="btnCarrito" class="btn btn-primary" onclick="agregarcarrito('+doc.id+')">Carrito</button></td>' +
     '</tr>');
 }
 
