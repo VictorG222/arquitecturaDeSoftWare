@@ -48,7 +48,7 @@
         <input id="postDate" type="date"  placeholder="Fecha" required>
         <br>
         <br>
-        <button id="btnRegistrar" class="btn" style="background-color: #77B64D; color: #1D1C1C" onclick="register()">Registrar</button>
+        <button id="btnRegistrar" class="btn" style="background-color: #77B64D; color: #1D1C1C">Registrar</button>
 
     </div>
     <div class="col-sm-2">

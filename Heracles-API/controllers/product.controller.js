@@ -27,7 +27,7 @@ try {
     productController.getProduct = async (req, res) => {
         if(connection){
             await connection.query(
-                "SELECT * FROM products WHERE name = "+req.params.name+";",
+                "SELECT * FROM products WHERE name="+req.params.name+";",
                 (err, rows)=> {
                     if (err){
                         console.log(err);

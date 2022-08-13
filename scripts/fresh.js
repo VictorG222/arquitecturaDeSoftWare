@@ -42,7 +42,7 @@ function register(){
       .then(data => {
             window.alert('Producto registrado');
           })
-      .then(listar())
+      .then($("#idBody").empty())
       .catch(err => {
           console.log(err);
       })
@@ -50,7 +50,7 @@ function register(){
 
 
 function get(name){
-        fetch(api.products+'/'+name, {
+        fetch(api.products+'/"'+name+'"', {
           method: 'GET'
         }) .then(response => response.json()).then(data => {
         if(data.length > 0){
