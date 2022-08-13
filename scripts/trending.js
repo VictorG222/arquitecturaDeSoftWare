@@ -10,7 +10,6 @@ function listar(){
   get(fecha_inicial,fecha_final);
 }
 
-
 function initPayPalButton() {
     paypal.Buttons({
       style: {
@@ -87,8 +86,6 @@ function initPayPalButton() {
     }).render('#paypal-button-container');
   }
   initPayPalButton();
-
-
 
 function get(inputInicial,inputFinal){
     fetch(api.paypal_order+'/"'+inputInicial+'"/"'+inputFinal+'"', {

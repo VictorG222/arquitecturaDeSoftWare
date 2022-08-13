@@ -77,8 +77,8 @@ nav ul li:hover {
 				<li id="home">
           <img src="./res/img/bettergym.png" alt="bettergym"id="itemImg" width="100">
         </li>
-        <li id="trending">Trending</li>
-        <li id="fresh">Fresh</li>
+        <li id="trending">PayPal</li>
+        <li id="fresh">Productos</li>
         <li id="top">Top</li>
         <li id="contact">Contact us</li>
 			</ul>

@@ -15,3 +15,10 @@ class PaypalSchema{
     this.paypal_order = "http://localhost:3000/api/paypal";
   }
 }
+
+
+class ProductSchema{
+  constructor(){
+    this.products = "http://localhost:3000/api/product";
+  }
+}

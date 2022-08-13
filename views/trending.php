@@ -43,9 +43,6 @@
     <div class="col-sm-4">
     </div>
 
-       
-
-
 <!--- TABLA PARA LISTAR PAGOS--->
 <div class="container">
   <div class="row">
@@ -74,7 +71,6 @@
     </div>
   </div>
 </div>
-
 
 </body>
 <script type="text/javascript" src="./scripts/trending.js?v1.0.0"></script>
