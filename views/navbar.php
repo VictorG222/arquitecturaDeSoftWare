@@ -79,45 +79,40 @@ nav ul li:hover {
         </li>
         <li id="trending">PayPal</li>
         <li id="fresh">Productos</li>
-        <li id="top">Top</li>
+        <li id="top">Carrito</li>
         <li id="contact">Contact us</li>
 			</ul>
     </nav>
     <h5 class="hiddenView" id="<?php if($view) echo $view ?>"></h5>
 
 
-  <nav style="background-color: #000;   min-height: 50px;">
+  <!-- <nav style="background-color: #000;   min-height: 50px;">
       <div class="nav-wrapper">
-        <!-- Home -->
         <div class="col s12" id="breadcrumbHome" style="display: none;">
           <a href="?view=home" class="breadcrumb">Home</a>
         </div>
 
-        <!-- Trending -->
         <div class="col s12" id="breadcrumbTrending" style="display: none;">
           <a href="?view=home" class="breadcrumb">Home</a>
           <a href="?view=trending" class="breadcrumb">Trending</a>
         </div>
 
-        <!-- Fresh -->
         <div class="col s12" id="breadcrumbFresh" style="display: none;">
           <a href="?view=home" class="breadcrumb">Home</a>
           <a href="?view=fresh" class="breadcrumb">Fresh</a>
         </div>
 
-        <!-- Top -->
         <div class="col s12" id="breadcrumbTop" style="display: none;">
           <a href="?view=home" class="breadcrumb">Home</a>
           <a href="?view=top" class="breadcrumb">Top</a>
         </div>
 
-        <!-- Contact Us -->
         <div class="col s12" id="breadcrumbContact" style="display: none;">
           <a href="?view=home" class="breadcrumb">Home</a>
           <a href="?view=contact" class="breadcrumb">Contact Us</a>
         </div>
       </div>
-  </nav>
+  </nav> -->
 
   </div>
 

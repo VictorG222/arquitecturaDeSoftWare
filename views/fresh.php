@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-</style>
+
+<style>
+  .container{  
+text-align: center;  
+}  
+  </style>
 <body >
   <br>
   <br>
@@ -30,7 +35,9 @@
         <br>
         <br>
         <h6 class="center">Imagen</h6>
-        <input id="postImage" type="text"  placeholder="Imagen del producto" required>
+        <img  width="75%" id="productImage">
+        <br>
+        <button id="btnFoto" class="btn" style="background-color: #77B64D; color: #1D1C1C">Subir Foto</button>
         <br>
         <br>
         <h6 class="center">Unidades</h6>
@@ -96,4 +103,5 @@
 
 </body>
 <script type="text/javascript" src="./scripts/fresh.js?v1.0.0"></script>
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
 </html>

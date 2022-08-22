@@ -22,3 +22,9 @@ class ProductSchema{
     this.products = "http://localhost:3000/api/product";
   }
 }
+
+class KartSchema{
+  constructor(){
+    this.kart = "http://localhost:3000/api/kart";
+  }
+}

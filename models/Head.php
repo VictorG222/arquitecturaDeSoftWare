@@ -53,6 +53,10 @@ class Head {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    
+
+
     <!-- Local libraries | Title -->
     <title>' . $this->title . '</title>
     <link href="' . $this->root . '/res/css/main.css" rel="stylesheet" type="text/css" media="all"/>
@@ -61,7 +65,7 @@ class Head {
     <script src="' . $this->root . '/res/assets/canvasjs.min.js"></script>
     <script src="' . $this->root . '/res/assets/jquery.canvasjs.min.js"></script>
 
-
+    
     </head>
     ';
     echo $headCode;
